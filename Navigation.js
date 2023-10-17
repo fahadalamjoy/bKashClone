@@ -1,21 +1,14 @@
-import "react-native-gesture-handler";
-import React from "react";
-import { View, StatusBar } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import ScreenThree from "./screen/addMoney/ScreenThree";
-import Home from "./screen/Home";
-import Transition from "./screen/Transition";
-import ScreenOne from "./screen/addMoney/ScreenOne";
-import ScreenTwo from "./screen/addMoney/ScreenTwo";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-// import Home from "./screen/Home";
-// import Transition from "./screen/Transition";
-// import ScreenOne from "./screen/addMoney/ScreenOne";
-// import ScreenTwo from "./screen/addMoney/ScreenTwo";
-// import ScreenThree from "./screen/addMoney/ScreenThree";
+import Home from './screen/Home';
+import Transition from './screen/Transition';
+import ScreenOne from './screen/addMoney/ScreenOne';
+import ScreenTwo from './screen/addMoney/ScreenTwo';
+import ScreenThree from './screen/addMoney/ScreenThree';
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();
@@ -49,11 +42,10 @@ function DrawerGroup() {
   );
 }
 
-export default function App() {
+export default function Navigation() {
   return (
     <NavigationContainer>
       <DrawerGroup />
-      <StatusBar style="auto" />
     </NavigationContainer>
   );
 }
