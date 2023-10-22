@@ -1,8 +1,8 @@
 import "react-native-gesture-handler";
 import React from "react";
 import { View, StatusBar } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
-import { NavigationContainer } from "@react-navigation/native";
+import { AntDesign,Octicons,FontAwesome  } from "@expo/vector-icons";
+import { NavigationContainer  } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -13,6 +13,7 @@ import ScreenOne from "./screen/addMoney/ScreenOne";
 import ScreenTwo from "./screen/addMoney/ScreenTwo";
 import ScanQr from "./screen/ScanQr";
 import Inbox from "./screen/Inbox";
+import { CardStyleInterpolators } from '@react-navigation/stack';
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();
@@ -20,7 +21,11 @@ const Drawer = createDrawerNavigator();
 
 function HomeStackGroup() {
   return (
-    <HomeStack.Navigator initialRouteName="TabsGroup">
+    <HomeStack.Navigator initialRouteName="TabsGroup"
+      options={{ 
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS ,
+       }}
+    >
       <HomeStack.Screen
         name="TabsGroup"
         component={TabsGroup}
@@ -39,12 +44,20 @@ function TabsGroup() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: "red",
+        tabBarActiveTintColor: "white",
+        tabBarInactiveTintColor: "#9a9a9a",
         tabBarStyle: {
           paddingVertical: 10,
+          backgroundColor: "#E2136E",
+          height: 60,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: "bold",
+          paddingVertical: 5,
         },
         tabBarIconStyle: {
-          marginTop: -10,
+          // marginTop: -1,
         }
       }}
     >
@@ -53,7 +66,7 @@ function TabsGroup() {
         component={Home}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="home" size={size} color={color} />
+            <Octicons name="home" size={size} color={color} />
           ),
           headerShown: false,
         }}
@@ -82,15 +95,16 @@ function TabsGroup() {
                 style={{
                   backgroundColor: "white",
                   position: "absolute",
-                  top: -25,
+                  top: -15,
                   alignContent: "center",
                   alignItems: "center",
-                  padding: 20,
+                  padding: 15,
                   borderRadius: 50,
                   alignItems: "center",
                   borderRadius: 50,
                   borderWidth: 2,
-                  borderColor: "red",
+                  borderColor: "#E2136E",
+                  color: "#E2136E",
                 }}
                 />
                 </View>
@@ -100,11 +114,11 @@ function TabsGroup() {
         }}
       />
       <Tab.Screen
-        name="Settings"
+        name="Inbox"
         component={Transition}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="inbox" size={size} color={color} />
+            <FontAwesome name="envelope" size={size} color={color} />
           ),
         }}
       />
@@ -114,7 +128,11 @@ function TabsGroup() {
 
 function DrawerGroup() {
   return (
-    <Drawer.Navigator initialRouteName="Feed">
+    <Drawer.Navigator initialRouteName="Feed"
+      screenOptions={{
+        drawerPosition: "right",
+      }}
+    >
       <Drawer.Screen
         name="Feed"
         component={HomeStackGroup}
@@ -137,7 +155,7 @@ function DrawerGroup() {
 export default function App() {
   return (
     <NavigationContainer>
-      <StatusBar style="auto" />
+      <StatusBar style="#E2136E" />
       <DrawerGroup />
     </NavigationContainer>
   );
