@@ -3,6 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native';
 import HomeTop from '../components/HomeTop';
+import HomeMiddle from '../components/HomeMiddle';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -34,9 +35,15 @@ export default function Home() {
         </View>
       </View>
       <SafeAreaView>
-      <ScrollView style={{ backgroundColor: "white" }}>
+      <ScrollView >
+        <View style={{ backgroundColor: "white",borrder: 1 }}>
         <HomeTop />
+
+        </View>
         {/* <HomeTop /> */}
+        <View style={{ backgroundColor: "white", marginTop: 10 }}>
+          <HomeMiddle />
+        </View>
       </ScrollView>
       </SafeAreaView>
     </View>

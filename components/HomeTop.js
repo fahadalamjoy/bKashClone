@@ -66,14 +66,6 @@ export default function HomeTop() {
         </View>
         <View style={{ flexDirection: "row", gap: 1,justifyContent: "space-around",paddingVertical: 10,marginHorizontal: 10 }}> 
             <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
-                <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p5.png')} />
-                <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Add Money</Text>
-            </View>
-            <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
-                <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p6.png')} />
-                <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Pay Bill</Text>
-            </View>
-            <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
                 <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p7.png')} />
                 <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Savings</Text>
             </View>
@@ -81,6 +73,16 @@ export default function HomeTop() {
                 <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p8.png')} />
                 <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Loan</Text>
             </View>
+            
+            <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
+                <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p5.png')} />
+                <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Add Money</Text>
+            </View>
+            <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
+                <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p6.png')} />
+                <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Pay Bill</Text>
+            </View>
+            
       </View>
       <TouchableOpacity style={{flex: 1, backgroundColor: "white",borderRadius: 20,  paddingHorizontal: 10, paddingVertical: 5 ,borderWidth: 1, borderColor: "#E2136E",width: "20%",alignItems: "center",justifyContent: "center",alignSelf: "center"}} onPress={() => setSeeMore(false)}><Text style={{fontWeight: "bold",color: "#E2136E"}}>Close</Text></TouchableOpacity>
       </>
