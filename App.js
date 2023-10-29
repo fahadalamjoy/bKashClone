@@ -118,6 +118,12 @@ function TabsGroup() {
         name="Inbox"
         component={Transition}
         options={{
+          headerStyle: {
+            backgroundColor: "#E2136E",
+          },
+          headerTitleStyle: {
+            color: "white",
+          },
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="envelope" size={size} color={color} />
           ),
