@@ -14,6 +14,7 @@ import ScreenTwo from "./screen/addMoney/ScreenTwo";
 import ScanQr from "./screen/ScanQr";
 import Inbox from "./screen/Inbox";
 import { CardStyleInterpolators } from '@react-navigation/stack';
+import CustomDrawerContent from "./components/CustomDrawerContent";
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();
@@ -129,6 +130,7 @@ function TabsGroup() {
 function DrawerGroup() {
   return (
     <Drawer.Navigator initialRouteName="Feed"
+    drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
         drawerPosition: "right",
       }}
