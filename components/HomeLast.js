@@ -6,7 +6,7 @@ import { BottomSheet } from '@rneui/themed'
 import { TouchableOpacity } from 'react-native'
 import { useState } from 'react'
 
-export default function HomeMiddle() {
+export default function HomeLast() {
     const [isVisible, setIsVisible] = useState(false);
     const openBottomSheet = () => {
         setIsVisible(true);
@@ -18,7 +18,7 @@ export default function HomeMiddle() {
     <View style={{ backgroundColor: "white" }}>
       <View style={{ borderWidth: 1, borderColor: "#F5F5F5", borderRadius: 10,margin: 10 }}>
         <View style={{ flexDirection: "row",justifyContent: "space-between",paddingVertical: 10,paddingHorizontal: 20,borderBottomWidth: 1, borderColor: "#F5F5F5" }}>
-          <Text style={{ fontSize: 12, fontWeight: "bold", color: "gray" }}>My Bkash</Text>
+          <Text style={{ fontSize: 12, fontWeight: "bold", color: "gray" }}>Suggestion</Text>
           <TouchableOpacity
               onPress={() => setIsVisible(true)}
             >
@@ -29,19 +29,19 @@ export default function HomeMiddle() {
             <View style={{ flexDirection: "row", gap: 10,justifyContent: "space-around",paddingVertical: 10,marginHorizontal: 10 }}> 
                 <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
                     <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p1.png')} />
-                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Send Money</Text>
+                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>BTCL</Text>
                 </View>
                 <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
                     <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p2.png')} />
-                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Mobile Recharge</Text>
+                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Bkash DTH</Text>
                 </View>
                 <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
                     <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p3.png')} />
-                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Cash Out</Text>
+                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Ajker Deal</Text>
                 </View>
                 <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
                     <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p4.png')} />
-                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Make Payment</Text>
+                    <Text style={{ fontWeight: "light",fontSize: 12,color: "gray" }}>Daraz</Text>
                 </View>
                 <View style={{ flexDirection: "column", gap: 1,alignItems: "center",justifyContent: "center"  }}>
                     <Image style={{ width: 50, height: 50,aspectRatio: 1, resizeMode: 'contain' }} source={require('../assets/all/p3.png')} />

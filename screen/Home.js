@@ -4,8 +4,15 @@ import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native';
 import HomeTop from '../components/HomeTop';
 import HomeMiddle from '../components/HomeMiddle';
+import { SliderBox } from "react-native-image-slider-box";
+import HomeLast from '../components/HomeLast';
 
 export default function Home() {
+  const [images,setImages] = React.useState([
+    require('../assets/all/banner_one.png'),
+    require('../assets/all/banner_two.png'),
+    require('../assets/all/banner_three.png'),
+  ])
   const navigation = useNavigation();
 
   const openDrawer = () => {
@@ -34,8 +41,7 @@ export default function Home() {
           </TouchableOpacity>
         </View>
       </View>
-      <SafeAreaView>
-      <ScrollView >
+      <ScrollView>
         <View style={{ backgroundColor: "white",borrder: 1 }}>
         <HomeTop />
 
@@ -44,8 +50,13 @@ export default function Home() {
         <View style={{ backgroundColor: "white", marginTop: 10 }}>
           <HomeMiddle />
         </View>
+        <View style={{ flex: 1, margin: 10,overflow: "hidden",width: "100%",height: 150,alignContent: "center",alignItems: "center",justifyContent: "center" }}>
+          <SliderBox images={images} />
+        </View>
+        <View style={{ backgroundColor: "white", marginTop: 10 ,paddingBottom: 100}}>
+          <HomeLast />
+        </View>
       </ScrollView>
-      </SafeAreaView>
     </View>
   )
 }
