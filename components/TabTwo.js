@@ -94,7 +94,7 @@ export default function TabTwo() {
             <View>
                 <Text style={{ fontWeight: "bold",fontSize: 18,color: "black" }}>Send Money</Text>
                 <Text style={{ fontWeight: "light",fontSize: 16,color: "gray" }}>Nila</Text>
-                <Text style={{ fontWeight: "light",fontSize: 14,color: "gray" }}>Trnx ID 9HST7sp95sd623</Text>
+                <Text style={{ fontWeight: "light",fontSize: 14,color: "gray" }}>Trnx ID as</Text>
             </View>
         </View>
         <View style={{ flexDirection: "column",justifyContent: "space-between",}}>
@@ -108,7 +108,7 @@ export default function TabTwo() {
             <View>
                 <Text style={{ fontWeight: "bold",fontSize: 18,color: "black" }}>Payment</Text>
                 <Text style={{ fontWeight: "light",fontSize: 16,color: "gray" }}>Daraz</Text>
-                <Text style={{ fontWeight: "light",fontSize: 14,color: "gray" }}>Trnx ID 9HST7sp95sd623</Text>
+                <Text style={{ fontWeight: "light",fontSize: 14,color: "gray" }}>Trnx ID 9Has557sp95sd623</Text>
             </View>
         </View>
         <View style={{ flexDirection: "column",justifyContent: "space-between",}}>
@@ -136,7 +136,7 @@ export default function TabTwo() {
             <View>
                 <Text style={{ fontWeight: "bold",fontSize: 18,color: "black" }}>Payment</Text>
                 <Text style={{ fontWeight: "light",fontSize: 16,color: "gray" }}>Daraz</Text>
-                <Text style={{ fontWeight: "light",fontSize: 14,color: "gray" }}>Trnx ID 9HST7sp95sd623</Text>
+                <Text style={{ fontWeight: "light",fontSize: 14,color: "gray" }}>Trnx ID 9HST7sp9s5sd623</Text>
             </View>
         </View>
         <View style={{ flexDirection: "column",justifyContent: "space-between",}}>
